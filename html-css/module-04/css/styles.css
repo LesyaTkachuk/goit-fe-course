@@ -45,6 +45,7 @@ img {
 }
 
 .site-logo::first-letter {
+  font-weight: 700;
   color: #1abc9c;
 }
 

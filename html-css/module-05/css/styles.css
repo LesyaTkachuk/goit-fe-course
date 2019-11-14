@@ -131,7 +131,7 @@ a {
 }
 
 .inactive {
-  background-color: rgb(26, 188, 156, 0.65);
+  background-color: rgba(26, 188, 156, 0.65);
 }
 
 .slider-button:first-child {
@@ -160,10 +160,6 @@ a {
   font-size: 60px;
   line-height: 82px;
   font-weight: 900;
-}
-
-.slider-title:hover {
-  color: #ff7200;
 }
 
 .slider-subtitle {

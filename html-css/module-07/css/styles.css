@@ -192,11 +192,10 @@ a {
 .contacts {
   min-height: 42.1875rem;
   padding-top: 6.625rem;
-  border-bottom: 20px solid #222222;
-  background-image: url("../images/map_image.png"),
-    linear-gradient(#222222, #222222);
+  background-color: #222222;
+  background-image: url("../images/map_image.png");
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: right bottom 1.25rem;
 }
 
 .contacts .section-title {
@@ -220,6 +219,7 @@ a {
   width: 28.4375rem;
   padding: 1.125rem 1.25rem;
   border: 1px solid #cccccc;
+  font-size: 0.875rem;
 }
 
 .inputs-item input {
@@ -240,18 +240,22 @@ a {
   letter-spacing: -0.0625rem;
 }
 
+.required:focus {
+  outline: 1px solid transparent;
+}
+
 .required:focus:valid {
-  outline: 1px solid #008000;
+  border: 1px solid #008000;
 }
 
 .required:focus:invalid {
-  outline: 1px solid #ff0000;
+  border: 1px solid #ff0000;
 }
 
 .send-button {
   display: block;
   content: "";
-  margin: 1.25rem auto 0;
+  margin: 1.875rem auto 0;
   width: 15rem;
   height: 4.125rem;
   border-radius: 3px;

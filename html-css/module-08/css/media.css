@@ -1,5 +1,6 @@
 @media (max-width: 767px) {
   .header {
+    background-image: url(../img/background_768.png);
     min-height: 33.75rem;
     padding-top: 1.25rem;
   }

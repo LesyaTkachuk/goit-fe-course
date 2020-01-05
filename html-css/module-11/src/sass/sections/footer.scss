@@ -1,0 +1,43 @@
+.page-footer {
+  @extend %flex-space-between;
+  align-items: center;
+  padding: 0.625rem 0;
+  border-top: 1px solid #e5e5e5;
+
+  &__copyright {
+    font-size: 0.875rem;
+
+    &-name {
+    @extend %link;
+    color: $main--bcg-color-coral;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  &__input {
+    width: 14.625rem;
+    height: 2.5rem;
+    border: 1px solid #e7e7e7;
+    padding: 0.75rem;
+    font-size: 0.9375rem;
+
+    &::placeholder {
+        font-family: $secondary-font;
+        font-size: 0.9375rem;
+        font-weight: 300;
+        font-style: italic;
+        color: #e7e7e7;
+      }
+  }
+
+  &__submit-btn {
+    @extend %button;
+    width: 9.375rem;
+    height: 2.5rem;
+    background-color: $main--bcg-color-aqua;
+  }
+}

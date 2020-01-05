@@ -1,0 +1,119 @@
+.page-header {
+  min-height: 62.5rem;
+  background-image: linear-gradient(
+      360deg,
+      rgba(252, 227, 138, 0.9) 0%,
+      rgba(243, 129, 129, 0.9) 100%
+    ),
+    url('../images/background.jpg');
+  @extend %background;
+  color: $primary-white-color;
+  padding-top: 1.4375rem;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: linear-gradient(
+        180deg,
+        rgba(252, 227, 138, 0.9) 0%,
+        rgba(243, 129, 129, 0.9) 100%
+      ),
+      url('../images/background@2x.jpg');
+  }
+
+  &__subtitle {
+    @extend %subtitle;
+    font-size: 4.5rem;
+    margin-bottom: 2.25rem;
+  }
+
+  &__title {
+    @extend %title;
+    margin: 0;
+    @include font-set(9.375rem, 8.75rem);
+    margin-bottom: 6.75rem;
+
+    &-span {
+      display: block;
+    }
+  }
+
+  &__btn {
+    @extend %button;
+    margin: 0 auto;
+    width: 10.25rem;
+    height: 2.75rem;
+    border: 3px solid $primary-white-color;
+    background-color: transparent;
+  }
+}
+
+.page-navigation {
+  @extend %flex-space-between;
+  align-items: baseline;
+  margin-bottom: 10rem;
+}
+
+.site-logo {
+  @extend %link;
+  font-size: 30px;
+  font-weight: 700;
+  color: $primary-white-color;
+  transition: all 0.3s linear;
+
+  &:hover,
+  &:focus {
+    color: $main--bcg-color-sand;
+  }
+}
+
+.site-navigation {
+  @extend %flex-space-between;
+  width: 38.75rem;
+
+  &__link {
+    @extend %link;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: $primary-white-color;
+    transition: all 0.3s linear;
+
+    &:hover,
+    &:focus {
+      color: $main--bcg-color-sand;
+    }
+
+    &:hover,
+    &:focus {
+      .site-navigation__icon {
+        fill: $main--bcg-color-sand;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      @extend %pseudo;
+      width: 100%;
+      height: 0.1875rem;
+      left: 0;
+      bottom: -0.75rem;
+      background-color: $main--bcg-color-sand;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s linear;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 1.125rem;
+    height: 1.125rem;
+    fill: $primary-white-color;
+    transition: all 0.3s linear;
+  }
+}
